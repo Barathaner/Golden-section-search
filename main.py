@@ -31,17 +31,17 @@ def gss(f, a, b, tol=0.2,yint=[-10,10]):
         if f(c) < f(d):  # f(c) > f(d) to find the maximum
             b = d
             plt.plot(x,f(x),color="red")
-            plt.vlines(c, ymin=yint[0], ymax=len(x), colors='green', ls='--', lw=2,
+            plt.vlines(a, ymin=yint[0], ymax=len(x), colors='green', ls='--', lw=2,
                        label='vline_multiple - full height')
-            plt.vlines(d, ymin=yint[0], ymax=len(x), colors='blue', ls='--', lw=2,
+            plt.vlines(b, ymin=yint[0], ymax=len(x), colors='blue', ls='--', lw=2,
                        label='vline_multiple - full height')
             camera.snap()
         else:
             a = c
             plt.plot(x,f(x),color="red")
-            plt.vlines(c, ymin=yint[0], ymax=len(x), colors='green', ls='--', lw=2,
+            plt.vlines(a, ymin=yint[0], ymax=len(x), colors='green', ls='--', lw=2,
                        label='vline_multiple - full height')
-            plt.vlines(d, ymin=yint[0], ymax=len(x), colors='blue', ls='--', lw=2,
+            plt.vlines(b, ymin=yint[0], ymax=len(x), colors='blue', ls='--', lw=2,
                        label='vline_multiple - full height')
             camera.snap()
 
